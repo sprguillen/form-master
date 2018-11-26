@@ -1,0 +1,11 @@
+{
+	"development": {
+		"appName": "form-master",
+		"serverPort": "3000",
+		"clientPort": "8080",
+		"hostName": "localhost",
+		"dbPort": "27017",
+		"dbName": "form-master",
+		"secretKey": "vOC7RTojma"
+	}
+}
