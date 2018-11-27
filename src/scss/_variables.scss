@@ -1,0 +1,31 @@
+// Colors
+$blue: #007bff;
+$gray: #6c757d;
+$green: #28a745;
+$red: #dc3545;
+$yellow: #ffc107;
+$teal: #17a2b8;
+$light: #f8f9fa;
+$dark: #343a40;
+
+$primary-color: $blue;
+$secondary-color: $gray;
+$success-color: $green;
+$danger-color: $red;
+$warning-color: $yellow;
+$info-color: $teal;
+$light-color: $light;
+$dark-color: $dark;
+
+$separator-color: lighten($secondary-color, 45%);
+$stripe-color: rgba(black, .05);
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Misc variables
+$card-padding: 1.875rem;
+$border-radius: 6px;

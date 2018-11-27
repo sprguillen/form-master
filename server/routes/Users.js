@@ -19,7 +19,6 @@ app.post('/register', (req, res) => {
     userId: uuid()
   }
 
-  console.log(req.body);
   Users.findOne({
     email: req.body.email
   }).then(user => {

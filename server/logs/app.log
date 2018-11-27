@@ -41,3 +41,6 @@
 {"message":"Server is running on port 3000","level":"info","timestamp":"2018-11-26 23:33:46"}
 {"message":"Successfully connected to MongoDB port 27017","level":"info","timestamp":"2018-11-26 23:33:46"}
 {"message":"::1 - - [26/Nov/2018:15:33:48 +0000] \"POST /users/register HTTP/1.1\" 200 54 \"-\" \"PostmanRuntime/7.3.0\"\n","level":"info","timestamp":"2018-11-26 23:33:48"}
+{"message":"Server is running on port 3000","level":"info","timestamp":"2018-11-27 14:43:37"}
+{"message":"Successfully connected to MongoDB port 27017","level":"info","timestamp":"2018-11-27 14:43:37"}
+{"message":"::1 - - [27/Nov/2018:06:43:41 +0000] \"POST /users/login HTTP/1.1\" 200 264 \"-\" \"PostmanRuntime/7.3.0\"\n","level":"info","timestamp":"2018-11-27 14:43:41"}
