@@ -11,10 +11,10 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        '/users': {
-            target: 'http://localhost:3000',
-            changeOrigin: true
-        }
+      // '/api': {
+      //   target: '127.0.0.1:3000',
+      //   changeOrigin: true
+      // }
     },
 
     // Various Dev Server settings

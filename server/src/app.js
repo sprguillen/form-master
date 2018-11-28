@@ -12,8 +12,9 @@ const port = process.env.PORT || envConf.serverPort;
 
 const app = express();
 app.use(morgan('combined', { stream: logger.stream }));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-  extended: true
+  extended: false
 }));
 app.use(cors());
 
@@ -26,7 +27,7 @@ mongoose.connect(uri, { useNewUrlParser: true })
 // Require routers for the backend
 const Users = require('../routes/Users');
 
-app.use('/users', Users);
+app.use('/api', Users);
 
 app.listen(port, () => {
   logger.info(`Server is running on port ${port}`);
