@@ -22,12 +22,12 @@ const uri = `mongodb://${envConf.hostName}:${envConf.dbPort}/${envConf.dbName}`;
 
 mongoose.connect(uri, { useNewUrlParser: true })
   .then(() => logger.info(`Successfully connected to MongoDB port ${envConf.dbPort}`))
-  .catch(err => logger.error(err));
+  .catch(() => logger.error(`Please start MongoDB first!`));
 
 // Require routers for the backend
 const Users = require('../routes/Users');
 
-app.use('/api', Users);
+app.use('/api/users', Users);
 
 app.listen(port, () => {
   logger.info(`Server is running on port ${port}`);
