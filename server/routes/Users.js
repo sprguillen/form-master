@@ -37,7 +37,7 @@ app.post('/register', (req, res) => {
       res.json({ error: `Email ${req.body.email} already exists!` });
     }
   }).catch(err => {
-    res.send(`Error on finding user: ${err}`);
+    res.status(500).send(`Error on finding user: ${err}`);
   });
 });
 
@@ -64,7 +64,7 @@ app.post('/login', (req, res) => {
       res.json({ error: 'User does not exist..' });
     }
   }).catch(err => {
-    res.send(`Error on logging in: ${err}`);
+    res.status(500).send(`Error on logging in: ${err}`);
   });
 });
 

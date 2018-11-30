@@ -69,10 +69,16 @@ export default {
         email: this.form.email,
         password: this.form.pass,
       }).then((res) => {
-        console.log(res);
+        if (res.data.status) {
+          const status = res.data.status;
+          this.$toasted.success(status);
+        } else {
+          const error = res.data.error;
+          this.$toasted.error(error);
+        }
         this.clearForm();
       }).catch((err) => {
-        alert(err);
+        this.$toasted.error(err);
       });
     },
 

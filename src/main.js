@@ -5,6 +5,7 @@
 import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
 import Icon from 'vue-awesome/components/Icon';
+import Toasted from 'vue-toasted';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
@@ -16,6 +17,10 @@ import './scss/main.scss';
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue);
+Vue.use(Toasted, {
+  duration: 5000,
+  position: 'top-center',
+});
 Vue.component('icon', Icon);
 
 /* eslint-disable no-new */
