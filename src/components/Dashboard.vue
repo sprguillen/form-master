@@ -24,7 +24,6 @@ export default {
   name: 'Dashboard',
   computed: {
     user() {
-      console.log(this.$store.getters.getLoggedInUser);
       return this.$store.getters.getLoggedInUser;
     },
   },
