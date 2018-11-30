@@ -58,10 +58,18 @@ export default {
         email: this.form.email,
         password: this.form.pass,
       }).then((res) => {
-        localStorage.setItem('usertoken', res.data);
-        this.clearForm();
+        if (res.data.error) {
+          const error = res.data.error;
+          this.$toasted.error(error);
+        } else {
+          localStorage.setItem('usertoken', res.data.token);
+          this.$store.commit('setLoggedInUser', { user: res.data.payload });
+          this.$toasted.success('Successfully logged in..');
+          this.clearForm();
+          this.$router.push('dashboard');
+        }
       }).catch((err) => {
-        alert(err);
+        this.$toasted.error(err);
       });
     },
 

@@ -56,7 +56,7 @@ app.post('/login', (req, res) => {
           expiresIn: 1440
         });
 
-        res.send(token);
+        res.send({ token, payload });
       } else {
         res.json({ error: 'Password is invalid..' });
       }

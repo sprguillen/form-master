@@ -12,6 +12,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 // Components with relative imports
 import App from './App';
 import router from './router';
+import store from './store/store';
 import './scss/main.scss';
 
 Vue.config.productionTip = false;
@@ -27,6 +28,7 @@ Vue.component('icon', Icon);
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
 });
