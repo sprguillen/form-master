@@ -39,6 +39,8 @@ router.beforeEach((to, from, next) => {
         next('/login');
         break;
     }
+  } else if (to.path === '/') {
+    next('/dashboard');
   } else {
     next();
   }

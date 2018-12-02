@@ -17,3 +17,7 @@ html, body, #app {
 	width: 100%;
 	height: 3rem;
 }
+
+.main-bg {
+	background: linear-gradient(to right, $background-app-color 50%, #fff 50%);
+}
